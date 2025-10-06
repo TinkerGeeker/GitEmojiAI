@@ -1,3 +1,17 @@
+<div align="center">
+  <picture>
+    <img src="./assets/logo.jpg" width="100%">
+  </picture>
+</div>
+
+<div align="center" style="line-height: 1;">
+
+[![Wechat](https://img.shields.io/badge/Wechat-5EDDD2?style=for-the-badge&logo=wechat&logoColor=7CFC00)](https://github.com/TinkerGeeker/GitEmojiAI/assets/wechat.jpg)
+[![GITHUB](https://img.shields.io/badge/Github-24292F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TinkerGeeker/GitEmojiAI)
+[![xiaohongshu](https://img.shields.io/badge/xiaohongshu-FF0000?style=for-the-badge&logo=storybook&logoColor=white)](https://github.com/TinkerGeeker/GitEmojiAI/assets/xiaohongshu.jpg)
+
+</div>
+
 # GitEmojiAI
 
 通过Vibe Coding+提示词+Git提交规范完成Git自动化
@@ -53,89 +67,92 @@ git_commit_no_emoji.md (无Emoji提交规范)
 - **Emoji版本**: [`git_commit.md`](git_commit.md) - 适合喜欢可视化、直观提交信息的团队
 - **无Emoji版本**: [`git_commit_no_emoji.md`](git_commit_no_emoji.md) - 适合偏好标准化、易于搜索提交信息的团队
 
-### 2. AI工作流集成
+### 2. Vibe Coding + 提示词 + 提交规范工作流
 
-将 [`prompt.md`](prompt.md) 集成到您的AI开发环境中，AI将根据代码变更自动生成规范的提交信息。
+#### 核心概念
+Vibe Coding + 提示词 + 提交规范是一个完整的 AI 辅助开发工作流，通过环境配置、智能交互和规范化提交，实现高效的 AI 驱动开发。
 
-### 3. 手动使用
+#### 工作流程三步法
 
-#### Emoji版本使用流程：
-1. **查看变更**: 使用 `git status` 和 `git diff` 检查变更
-2. **选择表情**: 参考 [`git_emoji.md`](git_emoji.md) 选择合适的表情符号
-3. **编写提交信息**: 遵循 [`git_commit.md`](git_commit.md) 中的格式规范
-4. **执行提交**: 使用 `git commit -m "提交信息"`
+**第一步：选择并配置合适的 Vibe Coding 环境**
+- **选择环境**: 根据项目需求选择合适的 AI 编程环境
+  - **VS Code + KILO**: 适合需要深度代码交互的项目
+  - **Cursor**: 适合需要 AI 原生支持的项目
+  - **GitHub Copilot**: 适合需要快速代码补全的项目
+- **环境配置**:
+  - 安装必要的 AI 插件和工具
+  - 配置 API 密钥和访问权限
+  - 设置项目特定的提示词模板
+- **验证配置**: 确保环境能够正确读取和执行 Git 操作
 
-#### 无Emoji版本使用流程：
-1. **查看变更**: 使用 `git status` 和 `git diff` 检查变更
-2. **选择类型**: 参考 [`git_commit_no_emoji.md`](git_commit_no_emoji.md) 选择合适的类型标识符
-3. **编写提交信息**: 遵循 [`git_commit_no_emoji.md`](git_commit_no_emoji.md) 中的格式规范
-4. **执行提交**: 使用 `git commit -m "提交信息"`
+**第二步：指定仓库 + 提示词**
+- **仓库选择**: 确定要操作的 Git 仓库路径
+  - 本地仓库路径：`/path/to/your/project`
+  - 远程仓库地址：`git@github.com:username/repo.git`
+- **提示词配置**: 选择或创建合适的提示词
+  - **基础提示词**: 适用于一般开发任务
+  - **专业提示词**: 如 GitEmojiAI 中的 [`prompt.md`](projects/GitEmojiAI/prompt.md)
+  - **自定义提示词**: 根据项目需求定制
+- **参数设置**:
+  - 明确任务目标和输出要求
+  - 设置约束条件和最佳实践
+  - 指定文件路径和操作范围
 
-### 4. KILO AI 助手工作流示例
+**第三步：与 Agent 进行交互，完成提交操作**
+- **任务输入**: 向 AI Agent 发送具体指令
+  - 示例：`请阅读@/projects/GitEmojiAI/prompt.md 对@/projects/GitEmojiAI 进行提交操作`
+- **Agent 执行**: AI Agent 按照提示词规范执行操作
+  - **文件读取**: 读取相关配置文件和项目文档
+  - **状态检查**: 执行 `git status` 和 `git diff` 检查变更
+  - **文件操作**: 执行 `git add` 暂存文件
+  - **提交生成**: 根据规范生成提交信息
+  - **提交执行**: 执行 `git commit` 创建提交
+  - **远程推送**: 执行 `git push` 推送到远程仓库
+- **结果验证**: 确认操作成功完成
+  - 检查提交历史和哈希值
+  - 验证远程仓库同步状态
 
-以下是一个完整的示例，展示用户如何通过 GitEmojiAI 项目让 KILO AI 助手完成 Git 提交操作：
+#### 实际应用示例
 
-#### 用户输入
+**场景：初始化 GitEmojiAI 项目**
 ```
-请阅读@/projects/GitEmojiAI/prompt.md 对@/projects/GitEmojiAI 进行提交操作
+用户输入：请阅读@/projects/GitEmojiAI/prompt.md 对@/projects/GitEmojiAI 进行提交和推送操作
+
+执行过程：
+1. KILO 读取 prompt.md → 理解 AI 角色和任务
+2. KILO 读取 git_commit.md → 掌握提交规范
+3. KILO 读取 git_emoji.md → 了解表情符号选择
+4. KILO 执行 git status → 检查仓库状态
+5. KILO 执行 git add . → 暂存所有文件
+6. KILO 生成提交信息 → :tada: 初始化GitEmojiAI项目
+7. KILO 执行 git commit → 创建本地提交
+8. KILO 配置远程仓库 → 添加 origin
+9. KILO 执行 git push → 推送到远程
 ```
 
-#### KILO 执行步骤
+**场景：日常开发提交**
+```
+用户输入：请对当前项目进行代码提交，遵循 GitEmojiAI 规范
 
-**步骤 1: 阅读提示词文件**
-- KILO 读取 [`prompt.md`](prompt.md) 文件
-- 理解 AI 助手的角色设定和任务要求
-- 获取提交规范和操作指南的引用信息
+执行过程：
+1. KILO 检查代码变更 → 识别修改的文件
+2. KILO 分析变更类型 → 选择合适的表情符号
+3. KILO 生成提交信息 → 遵循规范格式
+4. KILO 执行提交操作 → 完成版本控制
+```
 
-**步骤 2: 阅读提交规范文件**
-- KILO 读取 [`git_commit.md`](git_commit.md) 文件
-- 了解 Git 提交规范（Emoji版本）
-- 掌握提交信息格式、Git操作步骤和最佳实践
-- 获取表情符号选择指南的引用
+#### 最佳实践
+- **环境一致性**: 团队成员使用相同的 Vibe Coding 环境配置
+- **提示词标准化**: 建立项目统一的提示词模板
+- **提交规范遵守**: 严格按照 Git 提交规范执行
+- **版本控制意识**: 定期提交，保持历史记录清晰
+- **协作配合**: 确保提交信息清晰明了，便于团队协作
 
-**步骤 3: 阅读表情符号参考文件**
-- KILO 读取 [`git_emoji.md`](git_emoji.md) 文件
-- 了解表情符号选择指南和变更类型分类
-- 为不同类型的提交提供合适的表情符号选择
-
-**步骤 4: 检查 Git 仓库状态**
-- KILO 执行 `git status` 命令
-- 查看当前工作目录的变更状态
-- 发现5个未跟踪的文件：README.md、git_commit.md、git_commit_no_emoji.md、git_emoji.md、prompt.md
-
-**步骤 5: 分析项目文件**
-- KILO 读取所有相关文件内容
-- 理解项目结构和文件用途
-- 确定这是一个新项目的初始提交
-
-**步骤 6: 暂存文件**
-- KILO 执行 `git add .` 命令
-- 将所有未跟踪的文件添加到暂存区
-
-**步骤 7: 生成提交信息**
-- KILO 根据项目性质选择合适的表情符号 `:tada:`
-- 遵循提交规范格式编写提交信息
-- 使用祈使语气，首字母大写
-- 提交信息不超过50字符
-- 提供详细的变更说明
-
-**步骤 8: 执行提交**
-- KILO 执行 `git commit -m ":tada: 初始化GitEmojiAI项目..."` 命令
-- 完成本地提交操作
-
-**步骤 9: 配置远程仓库**
-- KILO 检查远程仓库配置
-- 执行 `git remote add origin git@github.com:TinkerGeeker/GitEmojiAI.git` 添加远程仓库
-
-**步骤 10: 推送到远程仓库**
-- KILO 执行 `git push origin main` 命令
-- 将提交推送到远程仓库
-
-#### 最终结果
-- 提交哈希: `e797fd3`
-- 提交信息: `:tada: 初始化GitEmojiAI项目`
-- 包含5个文件，共479行代码
-- 成功推送到远程仓库
+#### 常见问题解决
+- **权限问题**: 确保 AI Agent 有足够的 Git 操作权限
+- **网络问题**: 检查远程仓库连接和 API 访问
+- **规范冲突**: 统一团队提交规范，避免格式不一致
+- **环境兼容**: 确保开发环境支持所需的 AI 工具
 
 ## 核心特性
 
