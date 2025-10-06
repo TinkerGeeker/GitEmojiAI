@@ -31,36 +31,7 @@ GitEmojiAI 是一个专为 AI 设计的 Git 提交规范工具包，帮助 AI �
 - [`commit_google.md`](commit_google.md) - Google Git 提交规范，提供 Google 内部最佳实践
 - [`commit_community.md`](commit_community.md) - 社区扩展与最佳实践，补充通用提交规范
 
-## 为什么
-
-### 问题
-- AI 生成的提交信息不规范
-- 团队提交格式不统一
-- 提交信息难以搜索和理解
-
-### 解决方案
-- 标准化提交格式和表情符号
-- 提供清晰的规范指南
-- 支持 AI 自动化工作流
-
 ## 怎么做
-
-### 1. 选择规范版本
- 
-**Gitmoji 规范**：适合喜欢可视化、直观提交信息的团队
-```bash
-# 使用 commit_emoji.md 规范
-```
- 
-**专业规范**：适合需要严格标准化、企业级项目的团队
-```bash
-# Angular 规范：使用 commit_angular.md
-# Conventional Commits 规范：使用 commit_conventional.md
-# Google 规范：使用 commit_google.md
-# 社区扩展规范：使用 commit_community.md
-```
- 
-### 2. AI 工作流
  
 **基本用法**：
 ```bash
@@ -71,19 +42,28 @@ GitEmojiAI 是一个专为 AI 设计的 Git 提交规范工具包，帮助 AI �
 **指定规范版本**：
 ```bash
 # Gitmoji 规范（默认）
-请阅读@/projects/GitEmojiAI/prompt.md 并使用 Gitmoji 规范对当前项目进行提交
+请阅读@/projects/GitEmojiAI/prompt.md 并使用 Gitmoji 规范对当前项目的变更进行提交
  
 # Angular 规范
-请阅读@/projects/GitEmojiAI/prompt.md 并使用 Angular 规范对当前项目进行提交
+请阅读@/projects/GitEmojiAI/prompt.md 并使用 Angular 规范对当前项目的变更进行提交
  
 # Conventional Commits 规范
-请阅读@/projects/GitEmojiAI/prompt.md 并使用 Conventional Commits 规范对当前项目进行提交
+请阅读@/projects/GitEmojiAI/prompt.md 并使用 Conventional Commits 规范对当前项目的变更进行提交
  
 # Google 规范
-请阅读@/projects/GitEmojiAI/prompt.md 并使用 Google 规范对当前项目进行提交
+请阅读@/projects/GitEmojiAI/prompt.md 并使用 Google 规范对当前项目的变更进行提交
  
 # 社区扩展规范
-请阅读@/projects/GitEmojiAI/prompt.md 并使用社区扩展规范对当前项目进行提交
+请阅读@/projects/GitEmojiAI/prompt.md 并使用社区扩展规范对当前项目的变更进行提交
+```
+
+**语言配置**：
+```bash
+# 指定英文提交信息
+请阅读@/projects/GitEmojiAI/prompt.md 并使用英文对当前项目的变更进行提交
+
+# 指定中文提交信息
+请阅读@/projects/GitEmojiAI/prompt.md 并使用中文对当前项目的变更进行提交
 ```
  
 **工作流程**：
@@ -98,7 +78,7 @@ GitEmojiAI 是一个专为 AI 设计的 Git 提交规范工具包，帮助 AI �
 ### 初始化项目
 ```bash
 # 用户输入
-请阅读@/projects/GitEmojiAI/prompt.md 对@/projects/GitEmojiAI 进行提交操作
+请阅读@/projects/GitEmojiAI/prompt.md 对@/projects/GitEmojiAI 进行提交和推送操作
  
 # AI 执行过程
 1. AI 读取提示词和默认规范文件（commit_emoji.md）
