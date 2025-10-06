@@ -71,17 +71,71 @@ git_commit_no_emoji.md (无Emoji提交规范)
 3. **编写提交信息**: 遵循 [`git_commit_no_emoji.md`](git_commit_no_emoji.md) 中的格式规范
 4. **执行提交**: 使用 `git commit -m "提交信息"`
 
-### 4. 团队协作
+### 4. KILO AI 助手工作流示例
 
-- **Emoji版本团队**:
-  - 统一使用 [`git_emoji.md`](git_emoji.md) 中的表情符号标准
-  - 遵循 [`git_commit.md`](git_commit.md) 中的提交规范
-  - 使用 [`prompt.md`](prompt.md) 确保AI生成一致的提交信息
+以下是一个完整的示例，展示用户如何通过 GitEmojiAI 项目让 KILO AI 助手完成 Git 提交操作：
 
-- **无Emoji版本团队**:
-  - 统一使用 [`git_commit_no_emoji.md`](git_commit_no_emoji.md) 中的类型标识符
-  - 遵循 [`git_commit_no_emoji.md`](git_commit_no_emoji.md) 中的提交规范
-  - 可以根据需要修改 [`prompt.md`](prompt.md) 以适配无Emoji版本
+#### 用户输入
+```
+请阅读@/projects/GitEmojiAI/prompt.md 对@/projects/GitEmojiAI 进行提交操作
+```
+
+#### KILO 执行步骤
+
+**步骤 1: 阅读提示词文件**
+- KILO 读取 [`prompt.md`](prompt.md) 文件
+- 理解 AI 助手的角色设定和任务要求
+- 获取提交规范和操作指南的引用信息
+
+**步骤 2: 阅读提交规范文件**
+- KILO 读取 [`git_commit.md`](git_commit.md) 文件
+- 了解 Git 提交规范（Emoji版本）
+- 掌握提交信息格式、Git操作步骤和最佳实践
+- 获取表情符号选择指南的引用
+
+**步骤 3: 阅读表情符号参考文件**
+- KILO 读取 [`git_emoji.md`](git_emoji.md) 文件
+- 了解表情符号选择指南和变更类型分类
+- 为不同类型的提交提供合适的表情符号选择
+
+**步骤 4: 检查 Git 仓库状态**
+- KILO 执行 `git status` 命令
+- 查看当前工作目录的变更状态
+- 发现5个未跟踪的文件：README.md、git_commit.md、git_commit_no_emoji.md、git_emoji.md、prompt.md
+
+**步骤 5: 分析项目文件**
+- KILO 读取所有相关文件内容
+- 理解项目结构和文件用途
+- 确定这是一个新项目的初始提交
+
+**步骤 6: 暂存文件**
+- KILO 执行 `git add .` 命令
+- 将所有未跟踪的文件添加到暂存区
+
+**步骤 7: 生成提交信息**
+- KILO 根据项目性质选择合适的表情符号 `:tada:`
+- 遵循提交规范格式编写提交信息
+- 使用祈使语气，首字母大写
+- 提交信息不超过50字符
+- 提供详细的变更说明
+
+**步骤 8: 执行提交**
+- KILO 执行 `git commit -m ":tada: 初始化GitEmojiAI项目..."` 命令
+- 完成本地提交操作
+
+**步骤 9: 配置远程仓库**
+- KILO 检查远程仓库配置
+- 执行 `git remote add origin git@github.com:TinkerGeeker/GitEmojiAI.git` 添加远程仓库
+
+**步骤 10: 推送到远程仓库**
+- KILO 执行 `git push origin main` 命令
+- 将提交推送到远程仓库
+
+#### 最终结果
+- 提交哈希: `e797fd3`
+- 提交信息: `:tada: 初始化GitEmojiAI项目`
+- 包含5个文件，共479行代码
+- 成功推送到远程仓库
 
 ## 核心特性
 
