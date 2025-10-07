@@ -202,12 +202,6 @@ projects/GitEmojiAI/
     └── xiaohongshu.jpg          # 小红书二维码图片
 ```
 
-### 工具支持
-- [commitlint](https://commitlint.js.org/) - 提交信息校验工具
-- [husky](https://typicode.github.io/husky/) - Git Hooks 工具
-- [semantic-release](https://github.com/semantic-release/semantic-release) - 自动化版本发布
-- [standard-version](https://github.com/conventional-changelog/standard-version) - 版本管理工具
-
 ## 贡献
 
 欢迎提交 Issue 和 Pull Request 来改进这个项目。
