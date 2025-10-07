@@ -8,19 +8,17 @@
 
 <div align="center" style="line-height: 1;">
 
-[![Wechat](https://img.shields.io/badge/Wechat-5EDDD2?style=for-the-badge&logo=wechat&logoColor=7CFC00)](https://github.com/TinkerGeeker/GitEmojiAI/assets/wechat.jpg)
+[![Wechat](https://img.shields.io/badge/Wechat-5EDDD2?style=for-the-badge&logo=wechat&logoColor=7CFC00)](https://github.com/TinkerGeeker/GitEmojiAI/blob/main/assets/wechat.jpg)
 [![GITHUB](https://img.shields.io/badge/Github-24292F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TinkerGeeker/GitEmojiAI)
-[![xiaohongshu](https://img.shields.io/badge/xiaohongshu-FF0000?style=for-the-badge&logo=storybook&logoColor=white)](https://github.com/TinkerGeeker/GitEmojiAI/assets/xiaohongshu.jpg)
+[![xiaohongshu](https://img.shields.io/badge/xiaohongshu-FF0000?style=for-the-badge&logo=storybook&logoColor=white)](https://github.com/TinkerGeeker/GitEmojiAI/blob/main/assets/xiaohongshu.jpg)
 
 </div>
 
 # GitEmojiAI
 
-通过 Vibe Coding + 提示词 + Git 提交规范实现 Git 自动化
+🤖 专为 AI 设计的 Git 提交规范工具包
 
-## 是什么
-
-GitEmojiAI 是一个专为 AI 设计的 Git 提交规范工具包，帮助 AI 通过标准化的表情符号和提交格式，生成规范的 Git 提交信息。
+通过标准化的提示词和多种提交规范，帮助 AI 生成规范、美观的 Git 提交信息，提升代码协作质量。
 
 ### 核心文件
  
@@ -34,9 +32,23 @@ GitEmojiAI 是一个专为 AI 设计的 Git 提交规范工具包，帮助 AI �
 ## 怎么做
  
 **基本用法**：
+
+```bash
+请阅读@/projects/GitEmojiAI/prompt.md 并结合[规范类型]规范，使用[语言配置]，对[仓库]的变更进行[附加操作]
+  │
+  ├─⫸ [规范类型]：可选值（默认：Gitmoji）
+  │     Gitmoji|Angular|Conventional Commits|Google|社区扩展
+  │
+  ├─⫸ [语言配置]：可选值（默认：系统语言）
+  │     英文|中文
+  │
+  └─⫸ [附加操作]：可选值（默认：仅提交）
+        并推送
+```
+
 ```bash
 # 让 AI 读取默认规范（Gitmoji）并执行提交
-请阅读@/projects/GitEmojiAI/prompt.md 对当前项目进行提交操作
+请阅读@/projects/GitEmojiAI/prompt.md 使用中文，对当前项目的变更进行提交并推送
 ```
  
 **指定规范版本**：
