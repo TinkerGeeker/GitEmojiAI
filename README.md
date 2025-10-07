@@ -63,7 +63,7 @@ GitEmojiAI 是一个专为 AI 设计的 Git 提交规范工具包，帮助 AI �
 请阅读@/projects/GitEmojiAI/prompt.md 并使用英文对当前项目的变更进行提交
 
 # 指定中文提交信息
-请阅读@/projects/GitEmojiAI/prompt.md 并使用中文对当前项目的变更进行提交
+请阅读@/projects/GitEmojiAI/prompt.md 并使用中文对当前项目的变更进行提交，并推送
 ```
  
 **工作流程**：
