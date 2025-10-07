@@ -29,6 +29,37 @@
 - [`commit_google.md`](commit_google.md) - Google Git 提交规范，提供 Google 内部最佳实践
 - [`commit_community.md`](commit_community.md) - 社区扩展与最佳实践，补充通用提交规范
 
+## Quick Start
+
+### 1. Clone 仓库
+```bash
+# 推荐文件夹结构，确保 AI 编程助手可以同时访问两个仓库
+mkdir projects && cd projects
+
+# Clone GitEmojiAI 工具包
+git clone https://github.com/TinkerGeeker/GitEmojiAI.git
+
+# Clone 你的项目（替换为你的实际项目地址）
+git clone https://github.com/your-username/your-project.git
+```
+
+**文件夹结构示例**：
+```
+projects/
+├── your-project/    # 你的项目仓库
+└── GitEmojiAI/      # GitEmojiAI 工具包
+```
+
+### 2. 配置 AI 编程助手
+- 确保你的 AI 编程助手（如 Cursor、GitHub Copilot 等）已配置并可以访问文件。
+- or 将 [`prompt.md`](prompt.md) 文件的内容复制到你的 AI 助手的提示词中。
+
+### 3. 输入提示词
+- 在你的 AI 编程助手中输入类似以下的提示词：
+  ```
+  请阅读@/projects/GitEmojiAI/prompt.md 使用中文，对当前项目的变更进行提交并推送
+  ```
+
 ## 怎么做
  
 **基本用法**：
